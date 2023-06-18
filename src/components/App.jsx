@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ThemeContext,themes } from './ThemeContext';
+import Toggle from './Toggle/Toggle';
 
 export const App = () => {
   return (
-    <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <div> dyns.dev</div>
-    </header>
-  </div>
+    <ThemeContext.Consumer>
+      {({ theme, setTheme }) => (
+        <Toggle onChange={() => {   if (theme === themes.light) setTheme(themes.dark)
+                                    if (theme === themes.dark) setTheme(themes.light)
+                          }}
+                value={theme === themes.dark}
+        />
+      )}
+    </ThemeContext.Consumer>
   );
 };
