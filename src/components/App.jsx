@@ -6,7 +6,7 @@ export const App = () => {
     <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
-      <div> dyn.dev</div>
+      <div> dyns.dev</div>
     </header>
   </div>
   );
