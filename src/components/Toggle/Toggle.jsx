@@ -13,9 +13,10 @@ export default function Toggle ({onChange }) {
         <svg  className="App-logo" onClick={onChange}>
           <use href={logo+'#react'}></use>
         </svg>
+        <span></span>
         <div onClick={handleToggleModal}> dyns.dev</div>
-    {isOpened && <Contacts onCloseModal={handleToggleModal} />}
     </header>
+    {isOpened && <Contacts onCloseModal={handleToggleModal} />}
   </div>
   )
 }
